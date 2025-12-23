@@ -1,17 +1,20 @@
 {
-   "Name": "Example.Mod",
-   "Description": "A cool mod that does cool stuff",
-   "Version": "1.0.0",
-   "DownloadLink": "https://northstar.thunderstore.io/package/download/Example/Mod/",
-
-   "LoadPriority": 0,
-   "ConVars": [],
-   "Scripts": [{
-      "Path": "example.nut",
-      "RunOn": "(CLIENT || SERVER) && MP",
-      "ClientCallback": {
-         "Before":"example_callback"
+  "Name": "3030 Repeater Apex port",
+  "Description": "Ports the 3030 from apex to R2",
+  "Version": "0.0.2",
+  "LoadPriority": 1,
+  "RequiredOnClient": true,
+  "Scripts": [
+    {
+      "Path": "mp_weapon_3030.nut",
+      "RunOn": "SERVER || CLIENT",
+      "ServerCallback": {
+        "After": "MpWeapon3030_Init"
       }
-   }],
-   "Localisation": []
+    }
+  ],
+  "Localisation": [
+    "resource/repeater3030_%language%.txt"
+]
 }
+

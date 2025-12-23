@@ -1,0 +1,20 @@
+"UnlitTexture"
+{
+	"$basetexture" "models/weapons/3030/crosshair"
+    $translucent		"1"
+    $additive "1"
+    $allowoverbright "1"
+    $tsaaFullyResponsive 1            // Increases the influence of the current frame to 100%. Can cause jitter of static things, including the background behind a particle system
+    $tsaaResponsive 1                // Increases the influence of the current frame to 25%. Can cause jitter of static things, including the background behind a particle system
+    $tsaaMotionAlphaThreshold 0.01            // Lowering the threshold means velocities and responsive flag will be written starting at lower alphas 0.9
+    $tsaaMotionAlphaRamp 10  
+
+	$color 1 0.1 0.1 
+	"Proxies"
+    {
+        "HoloSight"
+        {
+            "resultVar"			    "$alpha"
+        }
+
+}
